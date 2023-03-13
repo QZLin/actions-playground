@@ -1,0 +1,3 @@
+#!/bin/sh
+# gh act -j hello-world -P ubuntu-latest=catthehacker/ubuntu:pwsh-latest
+gh act -j hello-world -P ubuntu-latest=-self-hosted | tee last.log

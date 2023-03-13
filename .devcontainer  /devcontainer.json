@@ -1,0 +1,14 @@
+{
+    "name": "GitHub Actions Playground",
+    "customizations": {
+        "codespaces": {
+          "openFiles": [".github/workflows/hello-world.yml"]  
+        },
+        "vscode": {
+          "extensions": [
+            "redhat.vscode-yaml",
+            "ms-vscode.powershell"
+          ]
+        }
+    }
+}

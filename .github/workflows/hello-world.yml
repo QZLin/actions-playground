@@ -1,11 +1,53 @@
+# yaml-language-server: $schema=https://json.schemastore.org/github-workflow.json
 name: Hello world
+run-name: ${{ github.actor }} is learning GitHub Actions
+permissions:
+  #https://docs.github.com/actions/using-jobs/assigning-permissions-to-jobs
+  actions: write
+#   checks: read|write|none
+#   contents: read|write|none
+#   deployments: read|write|none
+#   id-token: read|write|none
+#   issues: read|write|none
+#   discussions: read|write|none
+#   packages: read|write|none
+#   pages: read|write|none
+#   pull-requests: read|write|none
+#   repository-projects: read|write|none
+#   security-events: read|write|none
+#   statuses: read|write|none
 
-on: [push]
+on:
+  push:
+    branches: ["main"]
+  pull_request:
+    branches: ["main"]
+  workflow_dispatch:
 
 jobs:
   hello-world:
     runs-on: ubuntu-latest
+    defaults:
+      run:
+        shell: pwsh
     steps:
-      - name: Hello world
+      - uses: actions/checkout@v3
+
+      - name: Hello world1
+        run: echo Hello,world!
+      - name: Hello world2
         run: |
           echo "Hello world"
+      - run: echo hello
+        shell: bash
+
+      # https://docs.github.com/actions/learn-github-actions/expressions
+      - run: "Get-ChildItem env:\n
+          echo $env:INPUT_ENV_X $env:INPUT_ENV_Y $env:INPUT_ENV_Z"
+        with:
+          env_x: 1
+          env_y: "hi"
+          env_z: ${{ github.ref }}
+
+  job2:
+    runs-on: ubuntu-latest

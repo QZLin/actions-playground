@@ -16,8 +16,10 @@ If you have forked this repository and would like to use this as a codespace tem
 
 If you need to delete the codespace, you can do this at [https://github.com/codespaces](https://github.com/codespaces)
 
-## Test
+## Test action in codespace
 ### install
 `gh extension install nektos/gh-act`
 ### run
-`gh act -j hello-world -P ubuntu-latest=catthehacker/ubuntu:act-latest`
+`gh act -j hello-world -P ubuntu-latest=catthehacker/ubuntu:act-latest`  
+or  
+`gh act -j hello-world -P ubuntu-latest=-self-hosted`

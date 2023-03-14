@@ -43,11 +43,13 @@ jobs:
 
       # https://docs.github.com/actions/learn-github-actions/expressions
       - run: "Get-ChildItem env:\n
-          echo $env:INPUT_ENV_X $env:INPUT_ENV_Y $env:INPUT_ENV_Z"
+          echo $env:INPUT_X $env:INPUT_Y $env:INPUT_Z"
         with:
-          env_x: 1
-          env_y: "hi"
-          env_z: ${{ github.ref }}
+          x: 1
+          y: "hi"
+          z: ${{ github.ref }}
 
   job2:
     runs-on: ubuntu-latest
+    steps:
+      - run: uname -a

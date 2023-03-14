@@ -1,0 +1,20 @@
+{
+"$schema": "https://github.com/devcontainers/spec/raw/main/schemas/devContainer.base.schema.json",
+  "name": "GitHub Actions Playground",
+  "onCreateCommand": [
+    "./devcontainer/setup.sh"
+  ],
+  "customizations": {
+    "codespaces": {
+      "openFiles": [
+        ".github/workflows/hello-world.yml"
+      ]
+    },
+    "vscode": {
+      "extensions": [
+        "redhat.vscode-yaml",
+        "ms-vscode.powershell"
+      ]
+    }
+  }
+}

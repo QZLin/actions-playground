@@ -1,6 +1,7 @@
 {
 "$schema": "https://github.com/devcontainers/spec/raw/main/schemas/devContainer.base.schema.json",
   "name": "GitHub Actions Playground",
+  "image": "catthehacker/ubuntu:pwsh-latest",
   "onCreateCommand": [
     "./devcontainer/setup.sh"
   ],

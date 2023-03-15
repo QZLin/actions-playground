@@ -1,14 +1,16 @@
 {
-"$schema": "https://github.com/devcontainers/spec/raw/main/schemas/devContainer.base.schema.json",
   "name": "GitHub Actions Playground",
-  "image": "catthehacker/ubuntu:pwsh-latest",
-  "onCreateCommand": [
-    "./devcontainer/setup.sh"
-  ],
+  "image": "ghcr.io/catthehacker/ubuntu:pwsh-latest",
+  // "remoteUser": "ubuntu",
+  // "containerUser": "ubuntu",
+  "features": {
+    "ghcr.io/devcontainers/features/github-cli:1": {}
+  },
+  "onCreateCommand": ".devcontainer/setup.sh",
   "customizations": {
     "codespaces": {
       "openFiles": [
-        ".github/workflows/hello-world.yml"
+        "${containerWorkspaceFolder}/.github/workflows/hello-world.yml"
       ]
     },
     "vscode": {

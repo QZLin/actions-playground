@@ -1,3 +1,13 @@
-#!/bin/sh
+#!/bin/bash
 # gh act -j hello-world -P ubuntu-latest=catthehacker/ubuntu:pwsh-latest
-gh act -j hello-world -P ubuntu-latest=-self-hosted | tee last.log
+
+# if [ -f "log/last.log" ]; then
+#     for (( i=1; i<=11; i=i+1 )); do
+#         if [ -f "log/$i.log" ]; then
+#             mv "log/$i.log" "log/$(expr $i + 1).log"
+#         fi
+#     done
+#     mv "log/last.log" "log/1.log"
+# fi
+# touch log/last.log
+gh act -j hello-world -P ubuntu-latest=-self-hosted | tee log/last.log

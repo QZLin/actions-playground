@@ -3,8 +3,14 @@
   "image": "mcr.microsoft.com/devcontainers/base:ubuntu",
   // "remoteUser": "ubuntu",
   // "containerUser": "ubuntu",
+  // see: https://github.com/devcontainers/features/src
   "features": {
-    "ghcr.io/devcontainers/features/github-cli:1": {}
+    "ghcr.io/devcontainers/features/github-cli:1": {},
+    "ghcr.io/devcontainers/features/powershell:1": {},
+    "ghcr.io/devcontainers/features/docker-in-docker:2": {},
+    "ghcr.io/devcontainers/features/common-utils:2": {
+      "configureZshAsDefaultShell": true
+    }
   },
   "onCreateCommand": ".devcontainer/setup.sh",
   "customizations": {

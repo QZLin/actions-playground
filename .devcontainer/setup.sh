@@ -1,4 +1,4 @@
 #!/bin/sh
-apt update
+sudo apt update
 gh extension install nektos/gh-act
 cp /etc/skel/.bashrc ~/.bashrc

@@ -1,4 +1,5 @@
 #!/bin/bash
+gh act -j $1 -P ubuntu-latest=-self-hosted
 # gh act -j hello-world -P ubuntu-latest=catthehacker/ubuntu:pwsh-latest
 
 # if [ -f "log/last.log" ]; then
@@ -10,4 +11,4 @@
 #     mv "log/last.log" "log/1.log"
 # fi
 # touch log/last.log
-gh act -j hello-world -P ubuntu-latest=-self-hosted | tee log/last.log
+#gh act -j hello-world -P ubuntu-latest=-self-hosted | tee log/last.log

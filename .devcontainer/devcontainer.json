@@ -1,6 +1,6 @@
 {
   "name": "GitHub Actions Playground",
-  "image": "ghcr.io/catthehacker/ubuntu:pwsh-latest",
+  "image": "mcr.microsoft.com/devcontainers/base:ubuntu",
   // "remoteUser": "ubuntu",
   // "containerUser": "ubuntu",
   "features": {
